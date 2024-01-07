@@ -11,6 +11,7 @@ server.set("views",path.join(path.resolve(),'View'))
 const handler=new UsersController();
 server.get('/',handler.home)
 server.post('/',handler.addUsers);
+server.get('/Allnames',handler.AllUsers);
 server.listen(7007,()=>{
     
     console.log("Server is running ")
